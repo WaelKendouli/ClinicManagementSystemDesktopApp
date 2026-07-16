@@ -2,6 +2,7 @@
 using ClinicDTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,10 @@ namespace ClinicLogicLayer
             return new clsDoctor(this.DoctorID, this.FirstName,
                 this.LastName, this.DateOfBirth, this.Phone, this.Email,
                 this.Address, this.Gender, this.PhotoURL, this.SpecializationID);
+        }
+        public static DataTable ShowListOfDoctors()
+        {
+            return clsDoctorsDA.ShowListOfDoctors();
         }
         private bool _Update()
         {
