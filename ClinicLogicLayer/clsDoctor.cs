@@ -72,16 +72,30 @@ namespace ClinicLogicLayer
                 this.Phone, this.Email, this.Address, this.Gender, 
                 this.PhotoURL, this.SpecializationID) > 0;
         }
-        public clsDoctor FindDoctorByID(int DoctorID)
+        public static clsDoctor FindDoctorByID(int DoctorID)
         {
-            this.DTO = clsDoctorsDA.FindDoctorByID(DoctorID);
-            return new clsDoctor(this.DoctorID, this.FirstName,
-                this.LastName, this.DateOfBirth, this.Phone, this.Email,
-                this.Address, this.Gender, this.PhotoURL, this.SpecializationID);
+           DoctorDTO DTO = clsDoctorsDA.FindDoctorByID(DoctorID);
+            return new clsDoctor(DTO.DoctorID, DTO.FirstName,
+                DTO.LastName, DTO.DateOfBirth, DTO.Phone, DTO.Email,
+                DTO.Address, DTO.Gender, DTO.PhotoURL, DTO.SpecializationID);
         }
         public static DataTable ShowListOfDoctors()
         {
             return clsDoctorsDA.ShowListOfDoctors();
+        }
+        public void ChangeAttribute(string firstName, string lastName,
+            DateTime dateOfBirth, string phone, string email, string address,
+            string gender, string photoURL, int specializationID)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            Phone = phone;
+            Email = email;
+            Address = address;
+            Gender = gender;
+            PhotoURL = photoURL;
+            SpecializationID = specializationID;
         }
         private bool _Update()
         {

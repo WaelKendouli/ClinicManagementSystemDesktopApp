@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,10 @@ namespace ClinicMangementSystemDesktopApp
         {
             InitializeComponent();
         }
-
+        DataTable _dtDoctors = new DataTable();
         private void frmManageDoctors_Load(object sender, EventArgs e)
         {
-
+            clsCustomDataGridViewUserControl.LoadData(_dtDoctors, dgvDoctors, cbItems, null, 150);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace ClinicMangementSystemDesktopApp
         {
             frmSaveDoctorsInfo frm = new frmSaveDoctorsInfo();
             frm.ShowDialog();
+            clsCustomDataGridViewUserControl.LoadData(_dtDoctors, dgvDoctors, cbItems, null, 150);
         }
     }
 }

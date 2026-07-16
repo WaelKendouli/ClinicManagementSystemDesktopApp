@@ -39,6 +39,7 @@
             this.ctrlSaveDoctorInfos1.Name = "ctrlSaveDoctorInfos1";
             this.ctrlSaveDoctorInfos1.Size = new System.Drawing.Size(1005, 509);
             this.ctrlSaveDoctorInfos1.TabIndex = 0;
+            this.ctrlSaveDoctorInfos1.OnDoctorSaved += new System.EventHandler<ClinicLogicLayer.Events.clsDoctorsEventArgs>(this.ctrlSaveDoctorInfos1_OnDoctorSaved);
             // 
             // label1
             // 
@@ -63,6 +64,8 @@
             this.MinimizeBox = false;
             this.Name = "frmSaveDoctorsInfo";
             this.Text = "frmSaveDoctorsInfo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSaveDoctorsInfo_FormClosing);
+            this.Load += new System.EventHandler(this.frmSaveDoctorsInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
