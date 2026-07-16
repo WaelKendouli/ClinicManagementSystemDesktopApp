@@ -1,0 +1,9 @@
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\bin\Debug\ClinicDataAccess.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\bin\Debug\ClinicDataAccess.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\bin\Debug\ClinicDTO.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\bin\Debug\ClinicDTO.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\obj\Debug\ClinicDataAccess.csproj.AssemblyReference.cache
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\obj\Debug\ClinicDataAccess.csproj.CoreCompileInputs.cache
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\obj\Debug\ClinicDa.A07A45E9.Up2Date
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\obj\Debug\ClinicDataAccess.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDataAccess\obj\Debug\ClinicDataAccess.pdb

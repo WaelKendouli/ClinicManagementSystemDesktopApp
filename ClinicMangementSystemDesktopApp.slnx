@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="ClinicDataAccess/ClinicDataAccess.csproj" Id="70d30f15-70d4-41e4-bb75-948a6200952d" />
+  <Project Path="ClinicDTO/ClinicDTO.csproj" Id="03edca10-14c8-4272-a99c-e8dbe0e7bf12" />
+  <Project Path="ClinicLogicLayer/ClinicLogicLayer.csproj" Id="43458c18-e7a4-47ef-9610-0899b22b2631" />
   <Project Path="ClinicMangementSystemDesktopApp/ClinicMangementSystemDesktopApp.csproj" Id="bafacce7-9931-46ad-9ecc-216f5419a6fb" />
 </Solution>

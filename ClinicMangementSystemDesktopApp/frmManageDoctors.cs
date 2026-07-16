@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace ClinicMangementSystemDesktopApp
 {
-    public partial class MainDashboard : Form
+    public partial class frmManageDoctors : Form
     {
-        public MainDashboard()
+        public frmManageDoctors()
         {
             InitializeComponent();
         }
 
-        private void MainDashboard_Load(object sender, EventArgs e)
+        private void frmManageDoctors_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void doctorsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

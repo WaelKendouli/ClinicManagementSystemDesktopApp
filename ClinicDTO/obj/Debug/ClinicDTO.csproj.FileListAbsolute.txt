@@ -1,0 +1,6 @@
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDTO\bin\Debug\ClinicDTO.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDTO\bin\Debug\ClinicDTO.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDTO\obj\Debug\ClinicDTO.csproj.AssemblyReference.cache
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDTO\obj\Debug\ClinicDTO.csproj.CoreCompileInputs.cache
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDTO\obj\Debug\ClinicDTO.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicDTO\obj\Debug\ClinicDTO.pdb

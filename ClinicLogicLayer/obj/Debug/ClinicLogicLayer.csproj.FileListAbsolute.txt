@@ -1,0 +1,11 @@
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\bin\Debug\ClinicLogicLayer.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\bin\Debug\ClinicLogicLayer.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\bin\Debug\ClinicDataAccess.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\bin\Debug\ClinicDTO.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\bin\Debug\ClinicDataAccess.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\bin\Debug\ClinicDTO.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\obj\Debug\ClinicLogicLayer.csproj.AssemblyReference.cache
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\obj\Debug\ClinicLogicLayer.csproj.CoreCompileInputs.cache
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\obj\Debug\ClinicLo.76C7D452.Up2Date
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\obj\Debug\ClinicLogicLayer.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicLogicLayer\obj\Debug\ClinicLogicLayer.pdb
