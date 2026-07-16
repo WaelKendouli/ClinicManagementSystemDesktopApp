@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicDTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -184,6 +185,61 @@ namespace ClinicDataAccess
                 }
             }
         }
+
+        public static DoctorDTO FindDoctorByID(int DoctorID)
+        {
+            using (SqlConnection conx = new SqlConnection(clsConnection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_FindDoctorByID", conx))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@DoctorID", DoctorID);
+
+                    try
+                    {
+                        conx.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Handle nullable fields
+                                var EmailOrdinal = reader.GetOrdinal("Email");
+                                string Email = reader.IsDBNull(EmailOrdinal) ? "" : reader.GetString(EmailOrdinal);
+
+                                var AddressOrdinal = reader.GetOrdinal("Address");
+                                string Address = reader.IsDBNull(AddressOrdinal) ? "" : reader.GetString(AddressOrdinal);
+
+                                var GenderOrdinal = reader.GetOrdinal("Gender");
+                                string Gender = reader.IsDBNull(GenderOrdinal) ? "" : reader.GetString(GenderOrdinal);
+
+                                var PhotoURLOrdinal = reader.GetOrdinal("PhotoURL");
+                                string PhotoURL = reader.IsDBNull(PhotoURLOrdinal) ? "" : reader.GetString(PhotoURLOrdinal);
+
+                                return new DoctorDTO(
+                                    reader.GetInt32(reader.GetOrdinal("DoctorID")),
+                                    reader.GetString(reader.GetOrdinal("FirstName")),
+                                    reader.GetString(reader.GetOrdinal("LastName")),
+                                    reader.GetDateTime(reader.GetOrdinal("DateOfBirth")),
+                                    reader.GetString(reader.GetOrdinal("Phone")),
+                                    Email,
+                                    Address,
+                                    Gender,
+                                    PhotoURL,
+                                    reader.GetInt32(reader.GetOrdinal("SpecializationID"))
+                                );
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception (log it, etc.)
+                        return null;
+                    }
+                }
+            }
+            return null;
+        }
+
 
     }
 }
