@@ -1,4 +1,5 @@
 ﻿using ClinicDataAccess;
+using ClinicDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ClinicLogicLayer
     {
         enum Mode { eAdd = 1 , eUpdate = 2 }
         Mode _Mode = Mode.eAdd;
-        public int DoctorID { get; set; }
+        public int DoctorID { get; set; } = -1;
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
@@ -21,7 +22,7 @@ namespace ClinicLogicLayer
         public string Gender { get; set; }
         public string PhotoURL { get; set; }
         public int SpecializationID { get; set; }
-
+        public DoctorDTO DTO { get; set; }
         public clsDoctor()
         {
         }
@@ -30,6 +31,7 @@ namespace ClinicLogicLayer
             string gender, string photoURL, int specializationID)
         {
             _Mode = Mode.eAdd;
+            DoctorID = -1;
             FirstName = firstName;
             LastName = lastName;
             DateOfBirth = dateOfBirth;
@@ -39,6 +41,9 @@ namespace ClinicLogicLayer
             Gender = gender;
             PhotoURL = photoURL;
             SpecializationID = specializationID;
+            DTO = new DoctorDTO(this.DoctorID, this.FirstName,
+                this.LastName, this.DateOfBirth, this.Phone, this.Email,
+                this.Address, this.Gender, this.PhotoURL, this.SpecializationID);
         }
         private clsDoctor(int doctorID, string firstName, string lastName,
             DateTime dateOfBirth, string phone, string email, string address,
@@ -55,6 +60,9 @@ namespace ClinicLogicLayer
             Gender = gender;
             PhotoURL = photoURL;
             SpecializationID = specializationID;
+            DTO = new DoctorDTO(this.DoctorID, this.FirstName,
+              this.LastName, this.DateOfBirth, this.Phone, this.Email,
+              this.Address, this.Gender, this.PhotoURL, this.SpecializationID);
         }
         private bool _Add()
         {
