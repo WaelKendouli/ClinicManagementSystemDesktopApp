@@ -11,6 +11,35 @@ namespace ClinicDataAccess
 {
     public class clsDoctorsDA
     {
+        public static DataTable ShowListOfDoctors()
+        {
+            DataTable dtDoctors = new DataTable();
+            using (SqlConnection conx = new SqlConnection(clsConnection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_ShowListOfDoctors", conx))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    try
+                    {
+                        conx.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                dtDoctors.Load(reader);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception (log it, etc.)
+                        return null;
+                    }
+                }
+            }
+            return dtDoctors;
+        }
         public static int AddNewDoctor(string firstName, string lastName, DateTime dateOfBirth, string phone, string email, string address, string gender, string photoURL, int specializationID)
         {
             using (var connection = new SqlConnection(clsConnection.ConnectionString))
