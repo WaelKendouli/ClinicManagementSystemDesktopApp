@@ -26,5 +26,11 @@ namespace ClinicMangementSystemDesktopApp
         {
 
         }
+
+        private void addNewDoctorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSaveDoctorsInfo frm = new frmSaveDoctorsInfo();
+            frm.ShowDialog();
+        }
     }
 }

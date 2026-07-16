@@ -24,7 +24,8 @@ namespace ClinicMangementSystemDesktopApp
 
         private void doctorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmManageDoctors frm = new frmManageDoctors();
+            frm.ShowDialog();
         }
     }
 }

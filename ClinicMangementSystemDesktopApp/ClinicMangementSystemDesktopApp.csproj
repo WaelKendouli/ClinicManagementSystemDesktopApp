@@ -58,6 +58,12 @@
     <Compile Include="frmManageDoctors.Designer.cs">
       <DependentUpon>frmManageDoctors.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSaveDoctorsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaveDoctorsInfo.Designer.cs">
+      <DependentUpon>frmSaveDoctorsInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageDoctors.resx">
       <DependentUpon>frmManageDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaveDoctorsInfo.resx">
+      <DependentUpon>frmSaveDoctorsInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainDashboard.resx">
       <DependentUpon>MainDashboard.cs</DependentUpon>

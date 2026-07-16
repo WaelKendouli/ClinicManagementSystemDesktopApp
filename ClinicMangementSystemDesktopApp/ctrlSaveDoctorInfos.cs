@@ -65,50 +65,41 @@ namespace ClinicMangementSystemDesktopApp
 
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
         {
-            if (clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtFirstName, e, string.IsNullOrEmpty, "this field shouldn't be empty"))
-            {
-                return;
-            }
+            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtFirstName, e, string.IsNullOrEmpty, "this field shouldn't be empty");
+            
             clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtFirstName, e, clsInputValidator.IsNameNotValid, "Name is not valid");
 
         }
 
         private void rxtLastName_Validating(object sender, CancelEventArgs e)
         {
-            if (clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtLastName , e, string.IsNullOrEmpty, "this field shouldn't be empty"))
-            {
-                return;
-            }
+            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtLastName, e, string.IsNullOrEmpty, "this field shouldn't be empty");
+            
             clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtLastName, e, clsInputValidator.IsNameNotValid, "Last name is not valid");
 
         }
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
-            if (clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtEmail, e, string.IsNullOrEmpty, "this field shouldn't be empty"))
-            {
-                return;
-            }
+            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtEmail, e, string.IsNullOrEmpty, "this field shouldn't be empty");
+
             clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtEmail, e, clsInputValidator.IsEmailNotValid, "Email is not valid");
 
         }
 
         private void txtPhone_Validating(object sender, CancelEventArgs e)
         {
-            if (clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtPhone, e, string.IsNullOrEmpty, "this field shouldn't be empty"))
-            {
-                return;
-            }
-            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtPhone, e, clsInputValidator.IsNameNotValid, "Phone is not valid");
+            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtPhone, e, string.IsNullOrEmpty, "this field shouldn't be empty");
+            
+            
+            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtPhone, e, clsInputValidator.IsPhoneInputNotCorrect, "Phone is not valid it shoub be with this format 0[5-7] + 7 digits");
 
         }
 
         private void txtAddress_Validating(object sender, CancelEventArgs e)
         {
-            if (clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtAddress, e, string.IsNullOrEmpty, "this field shouldn't be empty"))
-            {
-                return;
-            }
+            clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtAddress, e, string.IsNullOrEmpty, "this field shouldn't be empty");
+            
             clsErrorProviderVerfication._ValidateByErrorProvider(epCheck, txtAddress, e, clsInputValidator.IsNameNotValid, "Address is not valid");
 
         }
@@ -141,7 +132,7 @@ namespace ClinicMangementSystemDesktopApp
                 return;
             }
             DoctorSaved(new clsDoctorsEventArgs(txtFirstName.Text, txtLastName.Text,
-                dtpDateOfBirth.Value, txtPhone.Text, txtEmail.Text, txtAddress.Text, Gender , _PhotosURL, _dicSpecialazation[cbSpecializations.SelectedText]));
+                dtpDateOfBirth.Value, txtPhone.Text, txtEmail.Text, txtAddress.Text, Gender , _PhotosURL, _dicSpecialazation[cbSpecializations.SelectedItem.ToString()]));
         }
 
         private void btnChoosePhoto_Click(object sender, EventArgs e)

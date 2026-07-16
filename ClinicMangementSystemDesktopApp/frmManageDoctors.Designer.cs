@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDoctors = new System.Windows.Forms.DataGridView();
-            this.txtInput = new System.Windows.Forms.TextBox();
-            this.cbItems = new System.Windows.Forms.ComboBox();
             this.cmsOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addNewDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateThisDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteThisDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findSpecificDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtInput = new System.Windows.Forms.TextBox();
+            this.cbItems = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
             this.cmsOptions.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(422, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(448, 58);
+            this.label1.Size = new System.Drawing.Size(439, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Doctors dashboard";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -93,24 +93,6 @@
             this.dgvDoctors.Size = new System.Drawing.Size(1253, 443);
             this.dgvDoctors.TabIndex = 1;
             // 
-            // txtInput
-            // 
-            this.txtInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInput.Location = new System.Drawing.Point(44, 160);
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(413, 38);
-            this.txtInput.TabIndex = 2;
-            // 
-            // cbItems
-            // 
-            this.cbItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbItems.FormattingEnabled = true;
-            this.cbItems.Location = new System.Drawing.Point(482, 160);
-            this.cbItems.Name = "cbItems";
-            this.cbItems.Size = new System.Drawing.Size(363, 37);
-            this.cbItems.TabIndex = 3;
-            // 
             // cmsOptions
             // 
             this.cmsOptions.BackColor = System.Drawing.Color.Teal;
@@ -122,7 +104,7 @@
             this.deleteThisDoctorToolStripMenuItem,
             this.findSpecificDoctorToolStripMenuItem});
             this.cmsOptions.Name = "cmsOptions";
-            this.cmsOptions.Size = new System.Drawing.Size(291, 148);
+            this.cmsOptions.Size = new System.Drawing.Size(291, 176);
             // 
             // addNewDoctorToolStripMenuItem
             // 
@@ -130,6 +112,7 @@
             this.addNewDoctorToolStripMenuItem.Name = "addNewDoctorToolStripMenuItem";
             this.addNewDoctorToolStripMenuItem.Size = new System.Drawing.Size(290, 36);
             this.addNewDoctorToolStripMenuItem.Text = "Add new Doctor";
+            this.addNewDoctorToolStripMenuItem.Click += new System.EventHandler(this.addNewDoctorToolStripMenuItem_Click);
             // 
             // updateThisDoctorToolStripMenuItem
             // 
@@ -151,6 +134,24 @@
             this.findSpecificDoctorToolStripMenuItem.Name = "findSpecificDoctorToolStripMenuItem";
             this.findSpecificDoctorToolStripMenuItem.Size = new System.Drawing.Size(290, 36);
             this.findSpecificDoctorToolStripMenuItem.Text = "Find Specific doctor";
+            // 
+            // txtInput
+            // 
+            this.txtInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInput.Location = new System.Drawing.Point(44, 160);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(413, 38);
+            this.txtInput.TabIndex = 2;
+            // 
+            // cbItems
+            // 
+            this.cbItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbItems.FormattingEnabled = true;
+            this.cbItems.Location = new System.Drawing.Point(482, 160);
+            this.cbItems.Name = "cbItems";
+            this.cbItems.Size = new System.Drawing.Size(363, 37);
+            this.cbItems.TabIndex = 3;
             // 
             // frmManageDoctors
             // 

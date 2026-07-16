@@ -13,3 +13,6 @@ D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\obj\De
 D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicLogicLayer.dll
 D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicLogicLayer.pdb
 D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\obj\Debug\ClinicMa.B9D70994.Up2Date
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicDataAccess.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicDataAccess.pdb
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\obj\Debug\ClinicMangementSystemDesktopApp.frmSaveDoctorsInfo.resources
