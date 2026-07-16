@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlSaveDoctorInfos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSaveDoctorInfos.Designer.cs">
+      <DependentUpon>ctrlSaveDoctorInfos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManageDoctors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Utilities\clsErrorProviderVerfication.cs" />
     <Compile Include="Utilities\clsFolderSelector.cs" />
     <Compile Include="Utilities\clsPhotosHandeling.cs" />
+    <EmbeddedResource Include="ctrlSaveDoctorInfos.resx">
+      <DependentUpon>ctrlSaveDoctorInfos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManageDoctors.resx">
       <DependentUpon>frmManageDoctors.cs</DependentUpon>
     </EmbeddedResource>

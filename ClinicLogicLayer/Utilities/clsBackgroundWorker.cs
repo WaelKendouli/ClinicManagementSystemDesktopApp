@@ -1,4 +1,4 @@
-﻿using LogicLayer.Interfaces;
+﻿using Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicLayer.BackGroundOperations
+namespace BackGroundOperations
 {
     /// <summary>
     /// this class contains any operations or business logic  that requires Multithreading or MultiProcessing

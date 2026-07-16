@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicLogicLayer;
-namespace LibraryLogicLayer
+namespace LogicLayer
 {
     public class clsCustomDataGridViewUserControl
     {

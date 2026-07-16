@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-namespace LibraryLogicLayer
+namespace LogicLayer
 {
     public class clsInputValidator 
     {
