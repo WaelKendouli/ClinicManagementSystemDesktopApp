@@ -23,6 +23,7 @@ namespace ClinicLogicLayer
         public string PhotoURL { get; set; }
         public int SpecializationID { get; set; }
         public DoctorDTO DTO { get; set; }
+        // Add compostion specialazation object
         public clsDoctor()
         {
         }
@@ -70,7 +71,13 @@ namespace ClinicLogicLayer
                 this.Phone, this.Email, this.Address, this.Gender, 
                 this.PhotoURL, this.SpecializationID) > 0;
         }
-
+        public clsDoctor FindDoctorByID(int DoctorID)
+        {
+            this.DTO = clsDoctorsDA.FindDoctorByID(DoctorID);
+            return new clsDoctor(this.DoctorID, this.FirstName,
+                this.LastName, this.DateOfBirth, this.Phone, this.Email,
+                this.Address, this.Gender, this.PhotoURL, this.SpecializationID);
+        }
         private bool _Update()
         {
             return clsDoctorsDA.UpdateDoctor(this.DoctorID, this.FirstName, this.LastName, this.DateOfBirth,
