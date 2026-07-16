@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicDataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace ClinicLogicLayer
 {
     public class clsDoctor
     {
+        enum Mode { eAdd = 1 , eUpdate = 2 }
+        Mode _Mode = Mode.eAdd;
         public int DoctorID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -22,11 +25,26 @@ namespace ClinicLogicLayer
         public clsDoctor()
         {
         }
-
-        public clsDoctor(int doctorID, string firstName, string lastName,
+        public clsDoctor( string firstName, string lastName,
             DateTime dateOfBirth, string phone, string email, string address,
             string gender, string photoURL, int specializationID)
         {
+            _Mode = Mode.eAdd;
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            Phone = phone;
+            Email = email;
+            Address = address;
+            Gender = gender;
+            PhotoURL = photoURL;
+            SpecializationID = specializationID;
+        }
+        private clsDoctor(int doctorID, string firstName, string lastName,
+            DateTime dateOfBirth, string phone, string email, string address,
+            string gender, string photoURL, int specializationID)
+        {
+            _Mode = Mode.eUpdate;
             DoctorID = doctorID;
             FirstName = firstName;
             LastName = lastName;
@@ -37,6 +55,40 @@ namespace ClinicLogicLayer
             Gender = gender;
             PhotoURL = photoURL;
             SpecializationID = specializationID;
+        }
+        private bool _Add()
+        {
+            return clsDoctorsDA.AddNewDoctor(this.FirstName, this.LastName, this.DateOfBirth,
+                this.Phone, this.Email, this.Address, this.Gender, 
+                this.PhotoURL, this.SpecializationID) > 0;
+        }
+
+        private bool _Update()
+        {
+            return clsDoctorsDA.UpdateDoctor(this.DoctorID, this.FirstName, this.LastName, this.DateOfBirth,
+                this.Phone, this.Email, this.Address, this.Gender,
+                this.PhotoURL, this.SpecializationID);
+
+        }
+        public override string ToString()
+        {
+            return $"Doctor full name {this.FirstName} {this.LastName} , Contact : Email & Phone [ {this.Email} | {this.Phone} ]";
+        }
+        public bool Save()
+        {
+            switch (_Mode)
+            {
+                case Mode.eAdd:
+                    if (_Add())
+                    {
+                        _Mode = Mode.eUpdate;
+                        return true;
+                    }
+                    break;
+                case Mode.eUpdate:
+                    return _Update();
+            }
+            return false;
         }
 
     }
