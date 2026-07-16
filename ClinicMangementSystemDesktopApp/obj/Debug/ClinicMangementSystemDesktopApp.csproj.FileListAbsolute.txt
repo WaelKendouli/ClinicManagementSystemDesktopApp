@@ -16,3 +16,5 @@ D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\obj\De
 D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicDataAccess.dll
 D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicDataAccess.pdb
 D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\obj\Debug\ClinicMangementSystemDesktopApp.frmSaveDoctorsInfo.resources
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicDTO.dll
+D:\Repos2\ClinicMangementSystemDesktopApp\ClinicMangementSystemDesktopApp\bin\Debug\ClinicDTO.pdb

@@ -1,4 +1,5 @@
-﻿using LogicLayer;
+﻿using ClinicLogicLayer;
+using LogicLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +19,14 @@ namespace ClinicMangementSystemDesktopApp
             InitializeComponent();
         }
         DataTable _dtDoctors = new DataTable();
+        private void _Refresh()
+        {
+            _dtDoctors = clsDoctor.ShowListOfDoctors();
+            clsCustomDataGridViewUserControl.LoadData(_dtDoctors, dgvDoctors, cbItems, null, 150);
+        }
         private void frmManageDoctors_Load(object sender, EventArgs e)
         {
-            clsCustomDataGridViewUserControl.LoadData(_dtDoctors, dgvDoctors, cbItems, null, 150);
+            _Refresh();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,7 +38,12 @@ namespace ClinicMangementSystemDesktopApp
         {
             frmSaveDoctorsInfo frm = new frmSaveDoctorsInfo();
             frm.ShowDialog();
-            clsCustomDataGridViewUserControl.LoadData(_dtDoctors, dgvDoctors, cbItems, null, 150);
+            _Refresh();
+        }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+            clsCustomDataGridViewUserControl.HandleTextBoxChangingEvent(txtInput, cbItems, _dtDoctors);
         }
     }
 }
