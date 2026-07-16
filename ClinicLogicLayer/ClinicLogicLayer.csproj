@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="clsDoctor.cs" />
     <Compile Include="clsSpecialazation.cs" />
     <Compile Include="Events\clsDoctorsEventArgs.cs" />
     <Compile Include="Interfaces\IF_Convertible.cs" />
