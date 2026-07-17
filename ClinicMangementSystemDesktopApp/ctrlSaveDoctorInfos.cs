@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicDTO;
 using ClinicLogicLayer;
 using ClinicLogicLayer.Events;
 using LogicLayer;
@@ -56,6 +58,35 @@ namespace ClinicMangementSystemDesktopApp
                 MessageBox.Show(e.Message);
             }
            
+        }
+        public void FillUserControl(DoctorDTO doctor)
+        { 
+            txtFirstName.Text = doctor.FirstName;
+            txtLastName.Text = doctor.LastName;
+            txtPhone.Text = doctor.Phone;
+            txtAddress.Text = doctor.Address;
+            dtpDateOfBirth.Value = doctor.DateOfBirth;
+            Gender = doctor.Gender;
+            if (doctor.Gender == "Male")
+            {
+                rbMale.Checked = true;
+            }
+            else
+            {
+                rbFemale.Checked = true;
+            }
+            if (File.Exists(doctor.PhotoURL))
+            {
+                pbPicture.Image = Image.FromFile(doctor.PhotoURL);
+            }
+            foreach (var item in _dicSpecialazation)
+            {
+                if (item.Value == doctor.SpecializationID)
+                {
+                    cbSpecializations.SelectedItem = item.Key;
+                    return;
+                }
+            }
         }
         private void ctrlSaveDoctorInfos_Load(object sender, EventArgs e)
         {

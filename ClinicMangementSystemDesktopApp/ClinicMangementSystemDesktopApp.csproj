@@ -112,6 +112,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClinicDTO\ClinicDTO.csproj">
+      <Project>{03edca10-14c8-4272-a99c-e8dbe0e7bf12}</Project>
+      <Name>ClinicDTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClinicLogicLayer\ClinicLogicLayer.csproj">
       <Project>{43458c18-e7a4-47ef-9610-0899b22b2631}</Project>
       <Name>ClinicLogicLayer</Name>
