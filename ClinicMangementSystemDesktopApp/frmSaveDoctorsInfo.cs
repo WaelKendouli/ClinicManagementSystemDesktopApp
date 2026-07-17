@@ -18,6 +18,12 @@ namespace ClinicMangementSystemDesktopApp
         {
             InitializeComponent();
         }
+        public frmSaveDoctorsInfo(int DoctorID)
+        {
+            InitializeComponent();
+            _DoctorID = DoctorID;
+            _Mode = enMode.eUpdate;
+        }
         HashSet<string> _RecentAddedDoctors = new HashSet<string>();
         enum enMode { eAdd , eUpdate };
         enMode _Mode = enMode.eAdd;
