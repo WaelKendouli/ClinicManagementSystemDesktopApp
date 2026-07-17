@@ -70,6 +70,7 @@ namespace ClinicMangementSystemDesktopApp
             txtPhone.Text = doctor.Phone;
             txtAddress.Text = doctor.Address;
             dtpDateOfBirth.Value = doctor.DateOfBirth;
+            txtEmail.Text = doctor.Email;
             Gender = doctor.Gender;
             if (doctor.Gender == "Male")
             {

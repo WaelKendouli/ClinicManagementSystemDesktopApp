@@ -23,6 +23,7 @@ namespace ClinicMangementSystemDesktopApp
             InitializeComponent();
             _DoctorID = DoctorID;
             _Mode = enMode.eUpdate;
+            _IntitalizeSavingForm();
         }
         HashSet<string> _RecentAddedDoctors = new HashSet<string>();
         enum enMode { eAdd , eUpdate };
@@ -45,7 +46,6 @@ namespace ClinicMangementSystemDesktopApp
                         throw new Exception("Docotor Id was not valid because it is negative");
                     }
                     Doctor = clsDoctor.FindDoctorByID(_DoctorID);
-                    ctrlSaveDoctorInfos1.FillUserControl(Doctor.DTO);
                     Doctor.ChangeAttribute(e.FirstName.ToUpper(), e.LastName.ToUpper(), e.DateOfBirth, e.Phone,
                         e.Email, e.Address, e.Gender, e.PhotoURL, e.SpecializationID);
                     Operation = " Updating ";
@@ -64,6 +64,13 @@ namespace ClinicMangementSystemDesktopApp
             else
             {
                 MessageBox.Show($"{Operation} has failed", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void _IntitalizeSavingForm()
+        {
+            if (_Mode == enMode.eUpdate)
+            {
+                ctrlSaveDoctorInfos1.FillUserControl(clsDoctor.FindDoctorByID(_DoctorID).DTO);
             }
         }
         private void frmSaveDoctorsInfo_Load(object sender, EventArgs e)

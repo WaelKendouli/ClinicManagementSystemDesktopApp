@@ -205,7 +205,9 @@ namespace ClinicDataAccess
                 try
                 {
                     connection.Open();
-                  return  command.ExecuteNonQuery() > 0;
+                    command.ExecuteNonQuery();
+                    return true;
+
                 }
                 catch (Exception ex)
                 {

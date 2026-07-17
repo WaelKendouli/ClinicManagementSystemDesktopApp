@@ -45,5 +45,11 @@ namespace ClinicMangementSystemDesktopApp
         {
             clsCustomDataGridViewUserControl.HandleTextBoxChangingEvent(txtInput, cbItems, _dtDoctors);
         }
+
+        private void updateThisDoctorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSaveDoctorsInfo frm = new frmSaveDoctorsInfo((int)dgvDoctors.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }
