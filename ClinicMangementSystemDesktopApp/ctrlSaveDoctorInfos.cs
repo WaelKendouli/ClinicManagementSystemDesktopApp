@@ -60,7 +60,11 @@ namespace ClinicMangementSystemDesktopApp
            
         }
         public void FillUserControl(DoctorDTO doctor)
-        { 
+        {
+            if (doctor == null)
+            {
+                throw new Exception("Doctor object should'nt be null");
+            }
             txtFirstName.Text = doctor.FirstName;
             txtLastName.Text = doctor.LastName;
             txtPhone.Text = doctor.Phone;

@@ -39,6 +39,7 @@ namespace ClinicMangementSystemDesktopApp
                         throw new Exception("Docotor Id was not valid because it is negative");
                     }
                     Doctor = clsDoctor.FindDoctorByID(_DoctorID);
+                    ctrlSaveDoctorInfos1.FillUserControl(Doctor.DTO);
                     Doctor.ChangeAttribute(e.FirstName.ToUpper(), e.LastName.ToUpper(), e.DateOfBirth, e.Phone,
                         e.Email, e.Address, e.Gender, e.PhotoURL, e.SpecializationID);
                     Operation = " Updating ";
